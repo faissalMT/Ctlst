@@ -1,0 +1,28 @@
+version: '3.5'
+
+services:
+  <%= @project_name %>-app:
+    container_name: <%= @project_name %>-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+  <%= @project_name %>-storybook:
+    container_name: <%= @project_name %>-storybook
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '9009:9009'
+    environment:
+      - NODE_ENV=development
+    command: "npm run storybook"

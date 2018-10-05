@@ -1,11 +1,15 @@
-up: down build
+serve: docker-up
+
+docker-up: docker-down docker-build
 	docker-compose up --build
 
-down:
+docker-down:
 	docker-compose down
 
-build:
+docker-build:
 	docker-compose build
+
+setup: docker-build
 
 shell:
 	docker exec -ti <%= @project_name %>-app bash

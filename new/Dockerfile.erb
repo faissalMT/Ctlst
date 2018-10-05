@@ -13,8 +13,8 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY package.json /usr/src/app/package.json
 RUN npm install
 RUN npm install -g react-scripts
-RUN npm install -g @storybook/cli
-RUN getstorybook
+RUN npm install -g @storybook/cli@alpha
+RUN storybook init
 
 # start app
 CMD ["npm", "start"]

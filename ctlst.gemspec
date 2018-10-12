@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'ctlst'
-  s.version     = '0.1.1'
+  s.version     = '0.1.2'
   s.date        = '2018-12-08'
   s.summary     = 'A helper for React.js projects'
   s.description = "Ctlst (pronounced 'Catalyst') is a tool similar to the Rails CLI. It provides simple commands to build React project that takes advantage of clean architecture, test driven development and containerisation. This folder must be added to your PATH."

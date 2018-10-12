@@ -1,15 +1,22 @@
+.PHONY: serve
 serve: docker-up
 
+.PHONY: docker-up
 docker-up: docker-down docker-build
 	docker-compose up --build
 
+.PHONY: docker-down
 docker-down:
 	docker-compose down
 
+.PHONY: docker-build
 docker-build:
 	docker-compose build
 
-setup: docker-build
-
+.PHONY: shell
 shell:
 	docker exec -ti <%= @project_name %>-app bash
+
+.PHONY: test
+test: docker-down docker-build
+	docker-compose run --rm <%= @project_name %>-app npm test

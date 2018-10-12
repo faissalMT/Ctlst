@@ -1,5 +1,9 @@
 require_relative '../lib/templates'
 module Template
+  def self.short_help
+    'new'
+  end
+
   def self.main(*args)
     if args.empty?
       print "Requires a project name\n"

@@ -1,6 +1,10 @@
 require_relative '../lib/templates'
 
 module Template
+  def self.short_help
+    'usecase'
+  end
+
   def self.main(*args)
     @usecase_class_name = args[0]
 

@@ -1,6 +1,10 @@
 require_relative '../lib/templates'
 
 module Template
+  def self.short_help
+    'component'
+  end
+
   def self.main(*args)
     @component_class_name = args[0]
 

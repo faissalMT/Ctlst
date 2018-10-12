@@ -2,7 +2,7 @@ require_relative '../lib/templates'
 
 module Template
   def self.short_help
-    'gateway'
+    'gateway [name] - Creates a gateway in src/Gateway (with tests)'
   end
 
   def self.main(*args)

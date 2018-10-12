@@ -2,7 +2,7 @@ require_relative '../lib/templates'
 
 module Template
   def self.short_help
-    'usecase'
+    'usecase [name] - Creates a usecase in src/Usecase (with tests)'
   end
 
   def self.main(*args)

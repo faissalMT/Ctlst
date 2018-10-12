@@ -2,7 +2,7 @@ require_relative '../lib/templates'
 
 module Template
   def self.short_help
-    'component'
+    'component [name] - Creates a component in src/Component (with tests & stories)'
   end
 
   def self.main(*args)

@@ -2,7 +2,7 @@ require_relative '../lib/templates'
 
 module Template
   def self.short_help
-    'domain'
+    'domain [name] - Creates a domain in src/Domain (with tests)'
   end
 
   def self.main(*args)

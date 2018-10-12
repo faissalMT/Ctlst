@@ -1,7 +1,7 @@
 require_relative '../lib/templates'
 module Template
   def self.short_help
-    'new'
+    'new [name] - Create a new React.js app with a full development environment'
   end
 
   def self.main(*args)

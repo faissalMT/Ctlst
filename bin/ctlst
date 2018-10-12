@@ -5,5 +5,10 @@ begin
   require_relative "../templates/#{ARGV[0]}"
   Template.main(*ARGV.drop(1))
 rescue LoadError
-  print "No such template '#{ARGV[0]}'\n"
+  if ARGV[0].nil?
+    require_relative '../templates/help'
+    Template.main(*ARGV.drop(1))
+  else
+    print "No such template '#{ARGV[0]}'\n"
+  end
 end

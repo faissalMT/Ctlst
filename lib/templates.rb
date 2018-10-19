@@ -1,5 +1,5 @@
 require 'fileutils'
-require 'ERB'
+require 'erb'
 
 module Templates
   def self.create(template, dir, scope)

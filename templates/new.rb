@@ -23,6 +23,9 @@ module Template
     Dir.chdir "./#{@project_name}" do
       `git init`
       `npm install storybook`
+      `npm install nock`
+      `npm install isomorphic-fetch`
+      `npm install enzyme`
       `storybook init`
 
       Templates.create('new', '.', binding)

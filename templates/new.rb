@@ -22,10 +22,8 @@ module Template
     `npx create-react-app #{@project_name}`
     Dir.chdir "./#{@project_name}" do
       `git init`
-      `npm install storybook`
-      `npm install nock`
       `npm install isomorphic-fetch`
-      `npm install enzyme`
+      `npm i --save-dev storybook nock enzyme enzyme-adapter-react-16`
       `storybook init`
 
       Templates.create('new', '.', binding)

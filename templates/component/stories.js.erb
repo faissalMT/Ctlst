@@ -3,5 +3,5 @@ import <%= @component_class_name %> from ".";
 import { storiesOf } from "@storybook/react";
 
 storiesOf("<%= @component_class_name %>", module).add("Default", () => {
-  <<%= @component_class_name %>/>
+  return <<%= @component_class_name %>/>
 });

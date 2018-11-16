@@ -23,7 +23,7 @@ module Template
     Dir.chdir "./#{@project_name}" do
       `git init`
       `npm install isomorphic-fetch`
-      `npm i --save-dev storybook nock enzyme enzyme-adapter-react-16 @storybook/react@alpha @storybook/cli@alpha`
+      `npm i --save-dev storybook nock enzyme enzyme-adapter-react-16 @storybook/react@alpha @storybook/cli@alpha graceful-fs`
       `storybook init`
 
       Templates.create('new', '.', binding)
